@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class Doubly_Linkedlist {
-    Node head;
+    private Node head;
 
     public void insertFirst(int val){
         Node node = new Node(val);
@@ -16,12 +16,21 @@ public class Doubly_Linkedlist {
 
     public void display(){
         Node node = head;
+        Node last=null;
 
         while(node!=null){
-            System.out.println(node.val+" -> ");
+            System.out.print(node.val+ " -> ");
+            last=node;
             node=node.next;
         }
-        System.out.println();
+        System.out.println("END");
+
+        System.out.println("print in reverse");
+        while(last!=null){
+            System.out.print(last.val+" -> ");
+            last=last.prev;
+        }
+        System.out.println("START");
     }
 
 
